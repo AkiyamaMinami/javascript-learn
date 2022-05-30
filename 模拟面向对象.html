@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // 构造函数 + 原型链 => 实现面向对象
+    // 构造函数 => 创建实例
+    // 原型链 => 挂载实例方法
+    // function Snake(length) {
+    //     this.length = length;
+    // }
+    // Snake.prototype.getLength = function () {
+    //     return this.length;
+    // }
+    // Snake.prototype.eat = function () {
+    //     this.length ++
+    // }
+    // let s = new Snake(1)
+    // console.log(s.getLength())
+    // s.eat();
+    // console.log(s.getLength())
+    // -------------------------------------------
+    // ES6 => class方式
+    class SnakeGame {
+        // 构造函数
+        constructor(length) {
+            this.length = length;
+            this.direction = 'right';
+        }
+        init() {}
+        initSnake() {}
+        start() {
+            this.init()
+            this.initSnake();
+            this.bindEventListener()
+        }
+    }
+    let sg = new SnakeGame(3);
+    sg.start()
+    class childSG extends SnakeGame {
+        constructor() {
+            super()
+        }
+    }
+</script>
+</body>
+</html>
